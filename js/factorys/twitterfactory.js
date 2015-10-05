@@ -8,7 +8,7 @@ app.factory('twitterdata', ['$http',function ($http) {
 
 		}).then(function succesCallback(response){
 
-			respuesta(response);
+			var respuesta = response;
 			console.log("Respuesta de Twitter");
 
 		}, function errorCallback(response){
@@ -17,9 +17,11 @@ app.factory('twitterdata', ['$http',function ($http) {
 
 		});
 
-		return {
+		
+	};
+
+	return {
 
 			timeline: timeline
 		};
-	};
 }]);

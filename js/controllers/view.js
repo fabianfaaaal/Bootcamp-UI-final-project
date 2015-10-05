@@ -3,6 +3,6 @@ app.controller('viewCtrl', ['$scope','twitterdata', function ($scope, twitterdat
 	console.log("viewCtrl working!");
 	$scope.title = "Nombre Twitter";
 	
-	//console.log(twitterdata);
+	//console.log(twitterdata.timeline(respuesta));
 
 }]);

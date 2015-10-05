@@ -1,6 +1,6 @@
 app.factory('twitterdata', ['$http',function ($http) {
 	
-	timeline = function(respuesta){ 
+	var timeline = function(respuesta){ 
 
 		$http({
 			method: 'GET',
@@ -8,7 +8,7 @@ app.factory('twitterdata', ['$http',function ($http) {
 
 		}).then(function succesCallback(response){
 
-			var respuesta = response;
+			respuesta = response;
 			console.log("Respuesta de Twitter");
 
 		}, function errorCallback(response){

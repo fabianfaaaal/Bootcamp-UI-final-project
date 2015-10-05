@@ -4,7 +4,7 @@ app.config(function($routeProvider){
 	$routeProvider.
 	when("/",{
 		controller: "viewCtrl",
-		templateUrl: "view/timeline.html"
+		templateUrl: "views/timeline.html"
 	})
 
 	.otherwise({

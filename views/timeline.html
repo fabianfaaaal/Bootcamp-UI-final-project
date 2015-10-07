@@ -1,6 +1,8 @@
+
 <h3> {{ title }} </h3>
-<div ng-repeat="tweets in tweets"> 
-	<p> @{{ tweets.data[i].user.screen_name }} </p>
-	<p> {{ tweets }} </p>
+<div ng-repeat="tweet in tweets"> 
+	<p> {{ tweet.user.screen_name }} </p>
+	
+	<!-- <p> {{ tweet }} </p> -->
 
 </div>

@@ -6,11 +6,11 @@ app.factory('twitterdata', ['$http',function ($http) {
 			method: 'GET',
 			url: "http://localhost:3000/timeline?count=50"
 
-		}).then(function (response){
+		}).then(function (response) {
 			cb(response);
 
-		}, function (response){
-
+		}, function (response) {
+ 
 			console.log("No hay respuesta");
 
 		});

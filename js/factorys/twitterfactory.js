@@ -1,17 +1,15 @@
 app.factory('twitterdata', ['$http',function ($http) {
 	
-	var timeline = function(respuesta){ 
+	var get = function(cb){ 
 
 		$http({
 			method: 'GET',
 			url: "http://localhost:3000/timeline?count=50"
 
-		}).then(function succesCallback(response){
-			var respuesta = response;
-			return respuesta;
-			console.log("Respuesta de Twitter");
+		}).then(function (response){
+			cb(response);
 
-		}, function errorCallback(response){
+		}, function (response){
 
 			console.log("No hay respuesta");
 
@@ -22,6 +20,6 @@ app.factory('twitterdata', ['$http',function ($http) {
 
 	return {
 
-			timeline: timeline
+			get: get
 		};
 }]);

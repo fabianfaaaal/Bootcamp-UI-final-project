@@ -7,8 +7,8 @@ app.factory('twitterdata', ['$http',function ($http) {
 			url: "http://localhost:3000/timeline?count=50"
 
 		}).then(function succesCallback(response){
-
-			respuesta = response;
+			var respuesta = response;
+			return respuesta;
 			console.log("Respuesta de Twitter");
 
 		}, function errorCallback(response){

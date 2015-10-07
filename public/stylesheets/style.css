@@ -1,8 +1,20 @@
 body {
+
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  position: center
+
 }
 
 a {
   color: #00B7FF;
+}
+
+.tweeterline {
+	/* TOP RIGHT BOTTOM LEFT*/
+	margin: 0 auto 0 auto;
+
+    width: 600px;
+	border-style: dotted;
+	border-width: 1px;
 }

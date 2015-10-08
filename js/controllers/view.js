@@ -10,6 +10,7 @@ app.controller('viewCtrl', ['$scope','twitterdata', function ($scope, Factory) {
 		
 		$scope.tweets = data.data;
 		console.log($scope.tweets);
+		console.log()
 	};
 
 	Factory.get(callback);

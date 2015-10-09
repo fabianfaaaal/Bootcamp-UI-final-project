@@ -39,10 +39,15 @@ app.controller('trendsCtrl', ['$scope', '$routeParams', 'twitterdata', function 
 	
 	$scope.title = "Trends";
 	console.log($routeParams.woeid);
-	
-	$scope.trendId = Factory.getTrends($routeParams.woeid, function(respuesta){
+
+	$scope.trenns;
+
+	Factory.getTrends($routeParams.woeid, function(respuesta){
 
 		console.log(respuesta);
+
+		$scope.trenns = respuesta.data[0].trends;
+		console.log("Trenns: "+ $scope.trenns);
 
 	});
 

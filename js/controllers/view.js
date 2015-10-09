@@ -1,4 +1,4 @@
-app.controller('viewCtrl', ['$scope','twitterdata', function ($scope, Factory) {
+app.controller('viewCtrl', ['$scope','twitterdata', 'detailsdata', function ($scope, Factory, Details) {
 
 	console.log("viewCtrl working!"); 
 	$scope.title = "Tiemeline";
@@ -11,6 +11,7 @@ app.controller('viewCtrl', ['$scope','twitterdata', function ($scope, Factory) {
 		
 		$scope.tweets = data.data;
 
+		Details.grabarTweets($scope.tweets); //Le paso la data a factorydetails
 
 		console.log($scope.tweets);
 		
@@ -32,10 +33,16 @@ app.controller('viewCtrl', ['$scope','twitterdata', function ($scope, Factory) {
 
 }]);
 
-app.controller('detailCtrl', ['$scope', '$routeParams', function ($scope, $routeParams) {
-
+app.controller('detailCtrl', ['$scope', '$routeParams','detailsdata', function ($scope, $routeParams, detailsdata) {
 	$scope.title = "Tweet details";
+	$scope.dTweet = detailsdata.thisTweet($routeParams.id); //asigno en dtweet el objeto con el id especifico
+
+	console.log($scope.dTweet);
+
+	
 	//$scope.tweets = $scope.tweets[$routeParams.id];
-	console.log($scope.tweets[$routeParams.id]);
+	
 
 }]);
+
+

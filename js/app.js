@@ -6,11 +6,11 @@ app.config(function($routeProvider){
 		controller: "viewCtrl",
 		templateUrl: "views/timeline.html"
 	}).
-	when("/tweet_details/tweet.data:id",{
+	when("/tweet_details/:id",{
 		controller: "detailCtrl",
 		templateUrl: "views/tweet_details.html"
 	}).
-	when("/trends",{
+	when("/trends/:woeid",{
 		controller: "trendsCtrl",
 		templateUrl: "views/trends.html"
 	})

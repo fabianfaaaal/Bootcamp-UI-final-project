@@ -4,14 +4,14 @@
 <div class="tweeterline" ng-repeat="tweet in tweets"> 
 	<img ng-src='{{tweet.user.profile_image_url}}'>
 	<p> {{ tweet.user.name }} </p>
-	<p> {{ tweet.id }} </p>
 	<p> {{ tweet.user.screen_name }} </p>
 	<p> {{ tweet.created_at }} </p>
 	<p> Retweeted: {{ tweet.retweeted }} </p>
 	<p> {{ tweet.text }} </p>
-	<a href="#/tweet_details/{{tweet.data.id}}">Show details</a><br><br>
-	
-	
 
+	<a href="#/tweet_details/{{tweet.id}}">Show details</a>
+
+	<br><br>
+	
 </div>
 	

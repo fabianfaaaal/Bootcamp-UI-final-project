@@ -13,7 +13,7 @@ $scope.position = {};
 
 				Factory.getGeo(latitud, longitud, function(resp){
 
-					console.log(resp.data[0].woeid);
+					//console.log(resp.data[0].woeid);
 
 					$scope.locationid = resp.data[0].woeid;
 

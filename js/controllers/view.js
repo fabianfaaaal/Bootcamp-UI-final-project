@@ -13,17 +13,6 @@ app.controller('viewCtrl', ['$scope','twitterdata', 'detailsdata', function ($sc
 
 		Details.grabarTweets($scope.tweets); //Le paso la data a factorydetails
 
-		console.log($scope.tweets);
-		
-		/*if ($scope.tweets.length) {
-			
-			for (var i = 0; i < $scope.tweets.length; i++) {
-
-			console.log($scope.tweets[i].text);
-			};
-
-		};*/
-
 	};
 
 
@@ -33,16 +22,31 @@ app.controller('viewCtrl', ['$scope','twitterdata', 'detailsdata', function ($sc
 
 }]);
 
+/* DETAIL CONTROLLER */
+
 app.controller('detailCtrl', ['$scope', '$routeParams','detailsdata', function ($scope, $routeParams, detailsdata) {
+	
 	$scope.title = "Tweet details";
-	$scope.dTweet = detailsdata.thisTweet($routeParams.id); //asigno en dtweet el objeto con el id especifico
+	$scope.dTweet = detailsdata.thisTweet($routeParams.id); //Asigno en dtweet el objeto con el id especifico
 
 	console.log($scope.dTweet);
 
-	
-	//$scope.tweets = $scope.tweets[$routeParams.id];
-	
 
+}]);
+
+/* TRENDS CONTROLLER */
+app.controller('trendsCtrl', ['$scope', '$routeParams', 'twitterdata', function ($scope, $routeParams, Factory) {
+	
+	$scope.title = "Trends";
+	console.log($routeParams.woeid);
+	
+	$scope.trendId = Factory.getTrends($routeParams.woeid, function(respuesta){
+
+		console.log(respuesta);
+
+	});
+
+	
 }]);
 
 

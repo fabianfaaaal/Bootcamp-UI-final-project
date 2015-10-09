@@ -10,7 +10,7 @@ app.factory('twitterdata', ['$http',function ($http) {
 			cb(response);
 
 		}, function (response) {
- 
+
 			console.log("No hay respuesta de timeline");
 
 		});
@@ -28,7 +28,7 @@ app.factory('twitterdata', ['$http',function ($http) {
 			cb(response);
 
 		}, function (response) {
- 
+
 			console.log("No hay respuesta de myplace");
 
 		});
@@ -36,7 +36,8 @@ app.factory('twitterdata', ['$http',function ($http) {
 		
 	};
 
-		var getTrends = function(id, cb) {  //Con esta funcion configuro la url a traves del parametro id, y asi obtengo los trends 
+	var getTrends = function(id, cb) {  //Con esta funcion configuro la url a traves del parametro id, y asi obtengo los trends 
+		console.log("Factory trends "+id);
 
 		$http({
 			method: 'GET',
@@ -46,19 +47,19 @@ app.factory('twitterdata', ['$http',function ($http) {
 			cb(response);
 
 		}, function (response) {
- 
+
 			console.log("No hay respuesta de trends");
 
 		});
 
-		
+
 	};
 
 
 	return {
 
-			get: get,
-			getGeo: getGeo,
-			getTrends: getTrends 
-		};
+		get: get,
+		getGeo: getGeo,
+		getTrends: getTrends 
+	};
 }]);

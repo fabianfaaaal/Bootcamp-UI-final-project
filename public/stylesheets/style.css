@@ -18,3 +18,8 @@ a {
 	border-style: dotted;
 	border-width: 1px;
 }
+
+.buttons {
+
+	display: inline;
+}

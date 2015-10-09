@@ -9,10 +9,17 @@
 	
 </head>
 
-<body class="cuerpo"> 
+<body class="cuerpo" ng-controller="locatCtrl"> 
 
 	<h1>Twitter</h1>
+	<div class="buttons"> 
+		<a href="#/" type="button">Home</a>
+		<a href="#/trends" type="button">Trends</a>
+	</div>
+	
 
+
+	<p> Latitude: {{ position.coords.latitude }} | Longitude: {{ position.coords.longitude }} </p>
 
 	<div ng-view>
 
@@ -21,6 +28,7 @@
 	<script src="js/app.js"></script>
 	<script src="js/factorys/twitterfactory.js"></script>
 	<script src="js/controllers/view.js"></script>
+	<script src="js/location.js"></script>
 
 </body>
 

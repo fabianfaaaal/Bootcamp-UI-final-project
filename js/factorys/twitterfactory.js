@@ -1,6 +1,6 @@
 app.factory('twitterdata', ['$http',function ($http) {
 	
-	var get = function(cb){ 
+	var get = function(cb){  //cb = CallBack
 
 		$http({
 			method: 'GET',
